@@ -1,10 +1,17 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+from .models import BookList
+from .serializers import BookListSerializer
 
 
 # Create your views here.
-def index(response):
-    return HttpResponse("<h1>Welcome to the book-store!</h1>")
+@api_view(["GET"])
+def get_all_books(request):
+    books = BookList.objects.all()
+    serializer = BookListSerializer(books, many=True)
+    return Response(serializer.data)
 
 
 def search(response):
