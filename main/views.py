@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -14,5 +13,9 @@ def get_all_books(request):
     return Response(serializer.data)
 
 
-def search(response):
-    return HttpResponse("<h1>Your search results below.</h1>")
+@api_view(["POST"])
+def add_book(request):
+    serializer = BookListSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
