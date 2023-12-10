@@ -19,7 +19,7 @@ _________________________________________________
 class BookList(models.Model):
     # basic information
     book_title = models.CharField(max_length=300)
-    book_isbn = models.IntegerField(unique=True)
+    book_isbn_13 = models.IntegerField(unique=True)
     book_author = models.CharField(max_length=100)
     book_year_of_publication = models.IntegerField()
     book_genre = models.CharField(max_length=300)
