@@ -43,7 +43,7 @@ class BookList(TitleSlugDescriptionModel,
     # soft deletion
     book_delete_status = models.BooleanField(default=False)
 
-    def on_delete(self):
-        # to perform soft deletion of a book
-        self.book_delete_status = True
-        self.save()
+    # def on_delete(self):
+    #     # to perform soft deletion of a book
+    #     self.book_delete_status = True
+    #     self.save()

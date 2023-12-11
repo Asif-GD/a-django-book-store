@@ -1,7 +1,15 @@
-from rest_framework_json_api import serializers
+# from rest_framework import status
+# from rest_framework.exceptions import APIException
 from rest_framework.fields import CharField, IntegerField, BooleanField
+from rest_framework import serializers
 
 from .models import BookList
+
+
+# class ISBN13IsNotUnique(APIException):
+#     status_code = status.HTTP_400_BAD_REQUEST
+#     default_detail = "another book with this isbn_13 is already present in the database"
+#     default_code = "invalid"
 
 
 class BookListSerializer(serializers.ModelSerializer):
