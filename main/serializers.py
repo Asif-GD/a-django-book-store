@@ -1,4 +1,4 @@
-from rest_framework import serializers
+from rest_framework_json_api import serializers
 from rest_framework.fields import CharField, IntegerField, BooleanField
 
 from .models import BookList
@@ -6,7 +6,7 @@ from .models import BookList
 
 class BookListSerializer(serializers.ModelSerializer):
 
-    book_title = CharField(required=True)
+    title = CharField(required=True)
     book_isbn_13 = IntegerField(required=True)
     book_author = CharField(required=True)
     book_year_of_publication = IntegerField(required=True)
