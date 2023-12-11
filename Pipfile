@@ -10,6 +10,7 @@ djangorestframework-jsonapi = "*"
 django-extensions = "*"
 django-filter = "*"
 sqlparse = "*"
+httpie = "*"
 
 [dev-packages]
 
