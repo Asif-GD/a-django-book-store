@@ -1,6 +1,5 @@
-from json import JSONDecodeError
-
-from django.http import JsonResponse
+# from json import JSONDecodeError
+# from django.http import JsonResponse
 from rest_framework import status, viewsets
 # from rest_framework.decorators import api_view
 # from rest_framework.parsers import JSONParser
@@ -39,13 +38,13 @@ from .serializers import BookListSerializer
 #         return JsonResponse({"result": "error", "message": "Json decoding error"}, status=400)
 
 class BookListViewSet(
-        ListModelMixin,
-        RetrieveModelMixin,
-        CreateModelMixin,
-        UpdateModelMixin,
-        DestroyModelMixin,
-        viewsets.GenericViewSet
-        ):
+    ListModelMixin,
+    RetrieveModelMixin,
+    CreateModelMixin,
+    UpdateModelMixin,
+    DestroyModelMixin,
+    viewsets.GenericViewSet
+):
     """
     A simple ViewSet for listing, retrieving, creating, updating, and soft_deleting books.
     """
