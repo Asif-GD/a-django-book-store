@@ -8,7 +8,7 @@ _________________________________________________
 | BookList                                      |
 -------------------------------------------------
 | title                         TEXT            |
-| book_isbn                     INTEGER         |
+| book_isbn                     INTEGER (UNIQUE)|
 | book_author                   TEXT            |
 | book_year_of_publication      INTEGER         |
 | book_genre                    TEXT            |
@@ -42,8 +42,3 @@ class BookList(TitleSlugDescriptionModel,
     book_availability = models.BooleanField(default=True)
     # soft deletion
     book_delete_status = models.BooleanField(default=False)
-
-    # def on_delete(self):
-    #     # to perform soft deletion of a book
-    #     self.book_delete_status = True
-    #     self.save()
