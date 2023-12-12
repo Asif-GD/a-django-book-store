@@ -28,7 +28,7 @@ class AddBookTestCase(APITestCase):
                 }
             }
         }
-        self.url = "/add_book/"
+        self.url = "/create/"
 
     def test_create_book(self):
         """

@@ -11,6 +11,7 @@ django-extensions = "*"
 django-filter = "*"
 sqlparse = "*"
 httpie = "*"
+drf-spectacular = "*"
 
 [dev-packages]
 
