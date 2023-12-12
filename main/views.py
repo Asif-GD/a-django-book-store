@@ -1,6 +1,8 @@
 # from json import JSONDecodeError
 # from django.http import JsonResponse
+from django.http import HttpRequest
 from rest_framework import status, viewsets
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 # from rest_framework.decorators import api_view
 # from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
@@ -48,7 +50,7 @@ class BookListViewSet(
     """
     A simple ViewSet for listing, retrieving, creating, updating, and soft_deleting books.
     """
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticatedOrReadOnly,)
     # only display books that aren't soft deleted
     queryset = BookList.objects.filter(book_delete_status=False)
     serializer_class = BookListSerializer
@@ -58,5 +60,36 @@ class BookListViewSet(
         instance = self.get_object()
         instance.book_delete_status = True
         instance.save()
+        host = HttpRequest.get_host(request)
         return Response(data="Soft deletion done. "
-                             "To restore the book, access it via the http://127.0.0.1:8000/admin/main/booklist/")
+                             f"To restore the book, access it via the http://{host}/admin/main/booklist/")
+
+# @api_view(["GET", "PATCH"])
+# def restore_book(request, book_id):
+#     instance = BookList.objects.filter(id=book_id)
+#     instance_data = BookList.objects.filter(id=book_id).values()[0]
+#     # book_delete_status = book[0].book_delete_status
+#     # book_delete_status = False
+#     # title = BookList.objects.filter(id=book_id)[0].title
+#     # print(data)
+#     print(instance_data)
+#     serializer = BookListSerializer(data=instance_data)
+#     print(serializer)
+#     if serializer.is_valid(raise_exception=True):
+#         serializer.restore_book()
+#         print(serializer.data)
+#         # serializer.book_delete_status = False
+#         # serializer.update(instance, serializer.data)
+#         return Response(serializer.data)
+#     else:
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#     # print(book_delete_status, title)
+#     # print(type(book))
+#     # BookList.restore_book(request)
+#     # return Response("Book Restored.")
+#
+# # @api_view(["GET", "PATCH"])
+# # def restore_book(request, book_id):
+# #     # instance = BookList.objects.filter(id=book_id)
+# #     BookList.restore_book()
+# #     return Response("Book Restored.")
