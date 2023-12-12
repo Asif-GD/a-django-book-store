@@ -1,6 +1,9 @@
 # from json import JSONDecodeError
 # from django.http import JsonResponse
 from django.http import HttpRequest
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_headers
 from rest_framework import status, viewsets
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 # from rest_framework.decorators import api_view
@@ -39,6 +42,8 @@ from .serializers import BookListSerializer
 #     except JSONDecodeError:
 #         return JsonResponse({"result": "error", "message": "Json decoding error"}, status=400)
 
+
+# this is much easier than coding individual views
 class BookListViewSet(
     ListModelMixin,
     RetrieveModelMixin,
@@ -54,6 +59,30 @@ class BookListViewSet(
     # only display books that aren't soft deleted
     queryset = BookList.objects.filter(book_delete_status=False)
     serializer_class = BookListSerializer
+
+    # cache implementation
+    @method_decorator(cache_page(60 * 60 * 1))  # value in seconds
+    # "Authorization" isn't required right now considering IsAuthenticatedOrReadOnly
+    @method_decorator(vary_on_headers("Authorization", "Cookie"))
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
+
+    # cache implementation
+    @method_decorator(cache_page(60 * 60 * 1))  # value in seconds
+    # "Authorization" isn't required right now considering IsAuthenticatedOrReadOnly
+    @method_decorator(vary_on_headers("Authorization", "Cookie"))
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        return Response(serializer.data)
 
     # overriding the destroy() to perform a partial update.
     def destroy(self, request, *args, **kwargs):
