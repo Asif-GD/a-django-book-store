@@ -102,3 +102,37 @@ You should now have a server running on http://127.0.0.1:8000/
 
 ***
 ***
+## Some Useful Links  
+  
+1. The local server - http://127.0.0.1:8000/ 
+2. Swagger UI - http://127.0.0.1:8000/api/schema/swagger-ui/
+3. ReDoc - http://127.0.0.1:8000/api/schema/redoc/
+4. Django admin interface - http://127.0.0.1:8000/admin/
+
+#### Additional Information
+1. The credentials for the Django admin interface can be found in ***admin1_credentials.txt*** file in the project directory
+
+```
+\a-django-book-store\meta_data\admin1_credentials.txt
+```
+
+2. Some sample data to be used when making API calls can be found in the ***sample_data***;
+
+```
+\a-django-book-store\meta_data\sample_data
+```
+
+***  
+***
+## Features 
+  
+##### 1. Retrieve All Books with Filtering and Pagination (Read) 
+##### 2. Retrieve a Single Book with Related Data (Read)
+##### 3. Create a New Book (Create)
+##### 4. Update a Book with Transactions (Update)
+##### 5. Delete a Book with Soft Deletion (Delete)
+##### 6. User authentication and authorization using a token-based system, allowing only authorized users to perform CRUD operations.
+##### 7. Caching of frequently requested data to improve API performance.
+
+***  
+***
