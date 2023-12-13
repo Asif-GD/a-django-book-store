@@ -11,9 +11,6 @@ router.register(r'restore-deleted-book', main_views.RestoreSoftDeletedBookViewSe
 urlpatterns = router.urls
 
 urlpatterns += [
-    # path("get_all_books/", main_views.get_all_books, name="view_all_books"),
-    # path("add_book/", main_views.add_book, name="add_book"),
-    # path("restore_book/<book_id>", main_views.restore_book, name="restore_book"),
     path("api-token-auth/", obtain_auth_token),  # gives us access to token auth
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),

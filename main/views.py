@@ -48,7 +48,6 @@ class BookListViewSet(
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
 
-    # cache implementation
     @method_decorator(cache_page(60 * 60 * 1))  # value in seconds
     @method_decorator(vary_on_headers("Authorization", "Cookie"))
     def retrieve(self, request, *args, **kwargs):

@@ -8,7 +8,7 @@ _________________________________________________
 | BookList                                      |
 -------------------------------------------------
 | title                         TEXT            |
-| book_isbn                     INTEGER (UNIQUE)|
+| book_isbn_13                  INTEGER (UNIQUE)|
 | book_author                   TEXT            |
 | book_year_of_publication      INTEGER         |
 | book_genre                    TEXT            |
@@ -32,13 +32,11 @@ class BookList(TitleSlugDescriptionModel,
     def __str__(self):
         return self.title
 
-    # basic information
+    # basic information fields
     title = models.CharField(max_length=300)
     book_isbn_13 = models.IntegerField(unique=True)
     book_author = models.CharField(max_length=100)
     book_year_of_publication = models.IntegerField()
     book_genre = models.CharField(max_length=300)
-    # stock checking
-    book_availability = models.BooleanField(default=True)
-    # soft deletion
-    book_delete_status = models.BooleanField(default=False)
+    book_availability = models.BooleanField(default=True)  # stock checking
+    book_delete_status = models.BooleanField(default=False)  # soft deletion

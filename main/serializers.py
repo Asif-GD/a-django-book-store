@@ -10,10 +10,8 @@ class BookListSerializer(serializers.ModelSerializer):
     book_author = CharField(required=True)
     book_year_of_publication = IntegerField(required=True)
     book_genre = CharField(required=True)
-    # stock checking
-    book_availability = BooleanField(default=True)
-    # soft deletion
-    book_delete_status = BooleanField(default=False)
+    book_availability = BooleanField(default=True)  # stock checking
+    book_delete_status = BooleanField(default=False)  # soft deletion
 
     class Meta:
         model = BookList

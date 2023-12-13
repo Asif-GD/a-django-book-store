@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django_extensions',
-    'django_filters',
+    'django_filters',  # filters
     'main.apps.MainConfig',
     'rest_framework',
-    'rest_framework.authtoken',
+    'rest_framework.authtoken',  # token authentication
     'drf_spectacular',  # schema generation
 ]
 
