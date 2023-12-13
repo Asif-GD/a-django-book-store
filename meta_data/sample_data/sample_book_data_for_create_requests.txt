@@ -1,0 +1,84 @@
+{
+"data":{
+"type": "BookList",
+"attributes":{
+"title": "My Inventions Autobiography of Nikola Tesla",
+"book_isbn_13": 9789354401473,
+"book_author": "Nikola Tesla",
+"book_year_of_publication": 2021,
+"book_genre": "autobiography"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"attributes":{
+"title": "Gulliver's Travels",
+"book_isbn_13": 9788175993259,
+"book_author": "Jonathan Swift",
+"book_year_of_publication": 2015,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"attributes":{
+"title": "A Song Of Ice And Fire — Fire And Blood",
+"book_isbn_13": 9780008587659,
+"book_author": "George R. R. Martin",
+"book_year_of_publication": 2022,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"attributes":{
+"title": "The Lost World",
+"book_isbn_13": 9789354402197,
+"book_author": "Sir Arthur Conan Doyle",
+"book_year_of_publication": 2021,
+"book_genre": "fantasy",
+"book_availability": "True",
+"book_delete_status": "False",
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"attributes":{
+"title": "The Lost World",
+"book_isbn_13": 9789354402197,
+"book_author": "Sir Arthur Conan Doyle",
+"book_year_of_publication": 2021,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"attributes":{
+"title": "The Phoenix King",
+"book_isbn_13": 9780356522029,
+"book_author": "Aparna Verma",
+"book_year_of_publication": 2023,
+"book_genre": "fantasy"
+}
+}
+}

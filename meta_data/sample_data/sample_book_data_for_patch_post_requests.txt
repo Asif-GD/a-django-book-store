@@ -1,0 +1,194 @@
+{
+"data":{
+"type": "BookList",
+"id": "20",
+"attributes":{
+"title": "Harry Potter and the Philosopher's Stone",
+"book_isbn_13": 9781408855652,
+"book_author": "J.K. Rowling",
+"book_year_of_publication": 2014,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "21",
+"attributes":{
+"title": "Harry Potter and the Chamber of Secrets",
+"book_isbn_13": 9781408855669,
+"book_author": "J.K. Rowling",
+"book_year_of_publication": 2014,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "22",
+"attributes":{
+"title": "Harry Potter and the Prisoner of Azkaban",
+"book_isbn_13": 9781408855676,
+"book_author": "J.K. Rowling",
+"book_year_of_publication": 2014,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "23",
+"attributes":{
+"title": "Harry Potter and the Goblet of Fire",
+"book_isbn_13": 9781408855683,
+"book_author": "J.K. Rowling",
+"book_year_of_publication": 2014,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+
+{
+"data":{
+"type": "BookList",
+"id": "24",
+"attributes":{
+"title": "Harry Potter and the Order of the Phoenix",
+"book_isbn_13": 9781408855690,
+"book_author": "J.K. Rowling",
+"book_year_of_publication": 2014,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "25",
+"attributes":{
+"title": "Harry Potter and the Half-Blood Prince",
+"book_isbn_13": 9781408855706,
+"book_author": "J.K. Rowling",
+"book_year_of_publication": 2014,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "26",
+"attributes":{
+"title": "Harry Potter and the Deathly Hallows",
+"book_isbn_13": 9781408855713,
+"book_author": "J.K. Rowling",
+"book_year_of_publication": 2014,
+"book_genre": "fantasy"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "27",
+"attributes":{
+"title": "The Complete Novel of Sherlock Holmes",
+"book_isbn_13": 9788175994317,
+"book_author": "Sir Arthur Conan Doyle",
+"book_year_of_publication": 2017,
+"book_genre": "crime fiction"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "28",
+"attributes":{
+"title": "Crime and Punishment",
+"book_isbn_13": 9789386538055,
+"book_author": "Fyodor Dostoyevsky",
+"book_year_of_publication": 2017,
+"book_genre": "crime"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "29",
+"attributes":{
+"title": "Atomic Habits",
+"book_isbn_13": 9781847941831,
+"book_author": "James Clear",
+"book_year_of_publication": 2018,
+"book_genre": "self help"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "30",
+"attributes":{
+"title": "The Psychology Of Money",
+"book_isbn_13": 9789390166268,
+"book_author": "Morgan Housel",
+"book_year_of_publication": 2020,
+"book_genre": "personal finance"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "31",
+"attributes":{
+"title": "Elon Musk",
+"book_isbn_13": 9780008279653,
+"book_author": "Ashlee Vance",
+"book_year_of_publication": 2021,
+"book_genre": "biography"
+}
+}
+}
+
+
+{
+"data":{
+"type": "BookList",
+"id": "32",
+"attributes":{
+"title": "The Diary Of A Young Girl",
+"book_isbn_13": 9788172345198,
+"book_author": "Anne Frank",
+"book_year_of_publication": 2014,
+"book_genre": "biography"
+}
+}
+}
