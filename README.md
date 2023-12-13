@@ -120,13 +120,13 @@ You should now have a server running on http://127.0.0.1:8000/
 ***
 ## Features 
   
-##### 1. Retrieve All Books with Filtering and Pagination (Read) 
-##### 2. Retrieve a Single Book with Related Data (Read)
-##### 3. Create a New Book (Create)
-##### 4. Update a Book with Transactions (Update)
-##### 5. Delete a Book with Soft Deletion (Delete)
-##### 6. User authentication and authorization using a token-based system, allowing only authorized users to perform CRUD operations.
-##### 7. Caching of frequently requested data to improve API performance.
+#### 1. Retrieve All Books with Filtering and Pagination (Read) 
+#### 2. Retrieve a Single Book with Related Data (Read)
+#### 3. Create a New Book (Create)
+#### 4. Update a Book with Transactions (Update)
+#### 5. Delete a Book with Soft Deletion (Delete)
+#### 6. User authentication and authorization using a token-based system, allowing only authorized users to perform CRUD operations.
+#### 7. Caching of frequently requested data to improve API performance.
 
 ***  
 ***
