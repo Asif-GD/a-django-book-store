@@ -7,6 +7,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, Sp
 
 router = routers.DefaultRouter()
 router.register(r'book', main_views.BookListViewSet, basename='book')
+router.register(r'restore-deleted-book', main_views.RestoreSoftDeletedBookViewSet, basename='restore-deleted-book')
 urlpatterns = router.urls
 
 urlpatterns += [
