@@ -25,7 +25,6 @@ First you will need to clone down the project onto your local machine
 3) You can now clone the repository using several ways;
 
 ```
-
 #option 1 - HTTPS
 
 git clone https://github.com/Asif-GD/a-django-book-store.git
@@ -35,7 +34,6 @@ git clone https://github.com/Asif-GD/a-django-book-store.git
 #option 2 - Download.zip
 
 you will have the option to down the entire repository as an archived folder on github.com
-
 ```
 
 
@@ -59,7 +57,6 @@ python -m venv venv
 6) Now, activate this virtual environment.
 
 ```
-
 # windows machine
 
 venv\Scripts\Activate
@@ -69,15 +66,12 @@ venv\Scripts\Activate
 #mac/linux
 
 source venv/bin/activate
-
 ```
 
 You will know your virtual environment is active when your terminal displays the following:
 
 ```
-
 (venv) path\to\project\drf_course>
-
 ```
 
 
