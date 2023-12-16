@@ -31,7 +31,7 @@ git clone https://github.com/Asif-GD/a-django-book-store.git
 
 
 
-#option 2 - Download.zip
+#option 2 - Download.zip (in case you do not have git)
 
 you will have the option to down the entire repository as an archived folder on github.com
 ```
@@ -104,13 +104,15 @@ You should now have a server running on http://127.0.0.1:8000/
 4. Django admin interface - http://127.0.0.1:8000/admin/
 
 #### Additional Information
-1. The credentials for the Django admin interface can be found in ***admin1_credentials.txt*** file in the project directory
+1. The credentials for the Django admin interface can be found in ***admin1_credentials.txt*** file; inside the ***meta_data*** folder
+ in the project directory
 
 ```
 \a-django-book-store\meta_data\admin1_credentials.txt
 ```
 
-2. Some sample data to be used when making API calls can be found in the ***sample_data***;
+2. Some sample data to be used when making API calls can be found in the ***sample_data*** folder; inside the ***meta_data*** folder
+ in the project directory
 
 ```
 \a-django-book-store\meta_data\sample_data
