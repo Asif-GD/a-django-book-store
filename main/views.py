@@ -64,7 +64,7 @@ class BookListViewSet(
         book_id = instance.id
         return Response(status=status.HTTP_200_OK,
                         data=f"Soft deletion done. "
-                             f"To restore the book, access it via the http://{host}/restore-deleted-book/{book_id}/")
+                             f"To restore the book, access it via http://{host}/restore-deleted-book/{book_id}/")
 
 
 class RestoreSoftDeletedBookViewSet(
@@ -111,4 +111,4 @@ class RestoreSoftDeletedBookViewSet(
         book_id = instance.id
         return Response(status=status.HTTP_200_OK,
                         data=f"Book restored. "
-                             f"To view the book, access it via the http://{host}/book/{book_id}/")
+                             f"To view the book, access it via http://{host}/book/{book_id}/")
