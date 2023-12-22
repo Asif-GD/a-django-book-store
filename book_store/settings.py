@@ -144,12 +144,12 @@ REST_FRAMEWORK = {
 
     'DEFAULT_METADATA_CLASS': 'rest_framework_json_api.metadata.JSONAPIMetadata',
 
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 5,
 
     'DEFAULT_FILTER_BACKENDS': (
         # it throws an error when used with pagination because of limit and offset parameters
-        # 'rest_framework_json_api.filters.QueryParameterValidationFilter',
+        'rest_framework_json_api.filters.QueryParameterValidationFilter',
         'rest_framework_json_api.filters.OrderingFilter',
         'rest_framework_json_api.django_filters.DjangoFilterBackend',
         'rest_framework.filters.SearchFilter',
