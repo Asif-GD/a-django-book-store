@@ -1,4 +1,4 @@
-# A Book Store Backend
+# A Bookstore Backend
 
 This is a Book Store backend application implementing RESTful API and CRUD operations using Django Rest Framework, Python and SQLite3 as the database.
 
@@ -12,7 +12,7 @@ This is a Book Store backend application implementing RESTful API and CRUD opera
 ***
 ## Getting started
 
-First you will need to clone down the project onto your local machine
+First, you will need to clone the project onto your local machine
 
 1) Create a new directory on your local machine. 
 
